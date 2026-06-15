@@ -33,6 +33,7 @@ const FavContext = createContext<ContextType | null>(null);
 export const FavProvider = ({ children }: { children: React.ReactNode }) => {
   const [listFavorites, dispatch] = useReducer(reducerFavorites, []);
 
+  
   return (
     <FavContext.Provider value={{ listFavorites, dispatch }}>
       {children}
